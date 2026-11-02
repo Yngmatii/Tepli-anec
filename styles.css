@@ -45,6 +45,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   color: var(--wood);
   font-family: var(--serif);
   font-size: 30px;
@@ -52,7 +55,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   line-height: 1;
   text-decoration: none;
 }
-.wordmark span { color: var(--amber); }
+.wordmark .wordmark-dot { color: var(--amber); }
+.brand-icon { display: grid; width: 34px; height: 34px; place-items: center; background: var(--amber); color: var(--wood); }
+.brand-icon svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.6; }
 
 .site-nav { display: flex; align-items: center; gap: 42px; }
 .site-nav a {
@@ -161,6 +166,8 @@ h2 { margin-bottom: 0; color: var(--wood); font-size: 52px; line-height: 1.08; }
 .project-arrow .icon { width: 16px; height: 16px; }
 .project-card:hover .project-arrow { background: var(--wood); }
 .project-meta { display: flex; justify-content: space-between; gap: 12px; margin: 19px 0 7px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+.project-type { display: inline-flex; align-items: center; gap: 7px; }
+.project-type .icon { width: 16px; height: 16px; color: #a86922; stroke-width: 1.5; }
 .project-card h3 { margin: 0 0 7px; color: var(--wood); font-size: 27px; line-height: 1.2; }
 .project-card > p { max-width: 340px; margin-bottom: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
 
