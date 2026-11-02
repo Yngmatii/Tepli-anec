@@ -3,33 +3,125 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Moje portfólio — začiatok</title>
-  <!-- Vzhľad stránky je v samostatnom súbore styles.css (vrstva CSS) -->
+  <meta name="description" content="Osobné portfólio. Projekty, tvorba a kontakt.">
+  <meta name="theme-color" content="#f5f2ee">
+  <title>Tvoje meno — portfólio</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-
-  <main class="uvitanie">
-    <div class="emoji">👋</div>
-    <h1>Tu vznikne moje portfólio</h1>
-    <p class="podtext">
-      Toto je štartová stránka kurzu <strong>Tvorba webstránok</strong>.
-      Odteraz ju budeš meniť ty — s pomocou AI asistenta.
-    </p>
-
-    <div class="karta">
-      <p class="karta-nadpis">Ako začať:</p>
-      <ol>
-        <li>Otvor <strong>Copilot Chat</strong> (ikona Copilota vpravo) — sem píšeš, čo chceš vytvoriť.</li>
-        <li>Tento súbor <code>index.html</code> si pozri v <strong>živom náhľade</strong>: pravý klik naň → <em>Show Preview</em>.</li>
-        <li>Choď na <strong>Blok 7</strong> kurzu a postupuj podľa neho.</li>
-      </ol>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="#domov" aria-label="Tvoje meno, domov">TM<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-label="Otvoriť navigáciu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hlavná navigácia">
+        <a href="#projekty">Projekty</a>
+        <a href="#o-mne">O mne</a>
+        <a class="nav-contact" href="#kontakt">Kontakt <span aria-hidden="true">↗</span></a>
+      </nav>
     </div>
+  </header>
 
-    <p class="poznamka">
-      Keď spravíš prvú zmenu, tento text pokojne zmaž — je len na úvod.
-    </p>
+  <main>
+    <section class="hero" id="domov" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-mark"></span> Portfólio · 2026</p>
+          <h1 id="hero-title">Ahoj, som<br><em>Tvoje meno.</em></h1>
+          <p class="hero-intro">Tvorím digitálne zážitky, ktoré spájajú premyslený dizajn s jednoduchosťou.</p>
+          <div class="hero-actions">
+            <a class="button" href="#projekty">Pozrieť projekty <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#kontakt">Ozvi sa mi <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="hero-note">Dobrý nápad si zaslúži priestor.</p>
+        </div>
+        <figure class="hero-image reveal">
+          <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="Drevená chata zasadená do pokojnej horskej krajiny" fetchpriority="high">
+          <figcaption><span>Premyslené do posledného detailu</span><span>01 — 03</span></figcaption>
+        </figure>
+      </div>
+      <div class="hero-bottom container" aria-hidden="true"><span>Vybrané práce</span><span class="scroll-line"></span><span>Posuň nižšie</span></div>
+    </section>
+
+    <section class="projects section-pad" id="projekty" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span class="eyebrow-mark"></span> 01 / Výber z tvorby</p>
+          <div class="heading-row">
+            <h2 id="projects-title">Projekty s <em>príbehom.</em></h2>
+            <p>Malý výber nápadov, ktoré dostali svoju podobu. Každý detail má svoj dôvod.</p>
+          </div>
+        </div>
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-image project-image-one">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Svetlý interiér s prírodnými materiálmi" loading="lazy">
+              <span class="project-index">01</span>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="project-meta"><span>Webová stránka</span><span>2026</span></div>
+            <h3>Názov projektu</h3>
+            <p>Krátky opis projektu, jeho cieľa a toho, čo si doň priniesol/priniesla.</p>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-image project-image-two">
+              <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Súčasná architektúra s čistými líniami" loading="lazy">
+              <span class="project-index">02</span>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="project-meta"><span>Vizuálna identita</span><span>2026</span></div>
+            <h3>Názov projektu</h3>
+            <p>Krátky opis projektu, jeho cieľa a toho, čo si doň priniesol/priniesla.</p>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-image project-image-three">
+              <img src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Drevený dom obklopený zeleňou" loading="lazy">
+              <span class="project-index">03</span>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="project-meta"><span>Digitálny produkt</span><span>2026</span></div>
+            <h3>Názov projektu</h3>
+            <p>Krátky opis projektu, jeho cieľa a toho, čo si doň priniesol/priniesla.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section-pad" id="o-mne" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-label reveal">
+          <p class="eyebrow"><span class="eyebrow-mark"></span> 02 / Pár slov</p>
+          <span class="about-number" aria-hidden="true">02</span>
+        </div>
+        <div class="about-copy reveal">
+          <h2 id="about-title">Verím v nápady, ktoré <em>majú zmysel.</em></h2>
+          <p>Baví ma premieňať nápady na premyslené weby a digitálne produkty. V procese spájam zvedavosť, cit pre detail a dôraz na jednoduchosť.</p>
+          <p>Každý projekt začína dobrým rozhovorom a končí riešením, ktoré funguje aj dlho po prvom dojme.</p>
+          <a class="text-link" href="#kontakt">Viac o spolupráci <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="about-stamp" aria-hidden="true"><span>nápad</span><span class="stamp-star">✳</span><span>detail</span></div>
+      </div>
+    </section>
   </main>
 
+  <footer class="site-footer" id="kontakt">
+    <div class="container footer-inner reveal">
+      <div>
+        <p class="eyebrow"><span class="eyebrow-mark"></span> 03 / Kontakt</p>
+        <h2>Poďme vytvoriť<br><em>niečo dobré.</em></h2>
+      </div>
+      <div class="footer-contact">
+        <p>Máš nápad alebo otázku? Napíš mi.</p>
+        <a class="footer-email" href="mailto:ahoj@tvojemail.sk">ahoj@tvojemail.sk <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-bottom">
+        <a class="wordmark wordmark-light" href="#domov" aria-label="Tvoje meno, späť na začiatok">TM<span>.</span></a>
+        <span>© <span id="current-year">2026</span> Tvoje meno</span>
+        <a class="back-top" href="#domov">Späť na začiatok <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
