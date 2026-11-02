@@ -172,14 +172,18 @@ h2 { margin-bottom: 0; color: var(--wood); font-size: 52px; line-height: 1.08; }
 .project-card > p { max-width: 340px; margin-bottom: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
 
 .about { position: relative; overflow: hidden; background: var(--surface); }
-.about-grid { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 40px 90px; }
-.about-label { position: relative; min-height: 245px; }
+.about-grid { display: grid; grid-template-columns: 0.55fr 0.8fr 1.65fr; gap: 40px; align-items: start; }
+.about-label { position: relative; grid-column: 1; grid-row: 1; min-height: 245px; }
 .about-number { position: absolute; bottom: 0; left: 0; color: rgba(68, 27, 15, 0.09); font-family: var(--serif); font-size: 150px; line-height: 0.8; }
-.about-copy { max-width: 660px; }
+.about-portrait { grid-column: 2; grid-row: 1 / span 2; width: 100%; margin: 0; }
+.about-portrait img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 35%; }
+.about-portrait figcaption { display: flex; flex-wrap: wrap; gap: 4px; padding-top: 12px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: 0.8px; line-height: 1.5; text-transform: uppercase; }
+.about-portrait figcaption span { color: var(--amber); }
+.about-copy { grid-column: 3; grid-row: 1; max-width: 660px; }
 .about-copy h2 { max-width: 600px; margin: 0 0 27px; font-size: 49px; }
 .about-copy > p { max-width: 570px; margin-bottom: 16px; color: #625e59; font-size: 15px; }
 .about-copy .text-link { display: inline-block; margin-top: 13px; }
-.about-stamp { grid-column: 2; display: flex; width: 120px; height: 120px; flex-direction: column; align-items: center; justify-content: center; margin: 2px 0 0 auto; border: 1px solid rgba(68, 27, 15, 0.3); border-radius: 50%; color: var(--wood); font-family: var(--serif); font-size: 15px; line-height: 1.2; transform: rotate(-9deg); }
+.about-stamp { grid-column: 3; grid-row: 2; display: flex; width: 120px; height: 120px; flex-direction: column; align-items: center; justify-content: center; margin: 2px 0 0 auto; border: 1px solid rgba(68, 27, 15, 0.3); border-radius: 50%; color: var(--wood); font-family: var(--serif); font-size: 15px; line-height: 1.2; transform: rotate(-9deg); }
 .stamp-star { width: 23px; height: 23px; margin: 3px 0; fill: var(--amber); }
 
 .site-footer { padding: 83px 0 25px; background: var(--wood); color: var(--paper); }
@@ -237,7 +241,11 @@ h2 { margin-bottom: 0; color: var(--wood); font-size: 52px; line-height: 1.08; }
   .heading-row > p { max-width: 480px; }
   .project-grid { gap: 18px; }
   .project-card h3 { font-size: 23px; }
-  .about-grid { grid-template-columns: 0.55fr 1.45fr; gap: 32px; }
+  .about-grid { grid-template-columns: minmax(150px, 0.7fr) minmax(0, 1.3fr); gap: 28px; }
+  .about-label { grid-column: 1; grid-row: 1; }
+  .about-portrait { grid-column: 1; grid-row: 2; }
+  .about-copy { grid-column: 2; grid-row: 1 / span 2; }
+  .about-stamp { grid-column: 2; grid-row: 3; }
   .about-copy h2 { font-size: 42px; }
   .about-number { font-size: 120px; }
 }
@@ -269,11 +277,14 @@ h2 { margin-bottom: 0; color: var(--wood); font-size: 52px; line-height: 1.08; }
   .project-card h3 { font-size: 26px; }
   .project-card > p { font-size: 13px; }
   .about-grid { grid-template-columns: 1fr; gap: 22px; }
-  .about-label { min-height: 44px; }
+  .about-label { grid-column: 1; grid-row: auto; min-height: 44px; }
+  .about-portrait { grid-column: 1; grid-row: auto; max-width: 360px; }
+  .about-portrait img { aspect-ratio: 1 / 1; object-position: center 35%; }
+  .about-copy { grid-column: 1; grid-row: auto; }
   .about-number { right: 0; bottom: -27px; left: auto; font-size: 76px; }
   .about-copy h2 { max-width: 430px; margin-bottom: 19px; font-size: 39px; }
   .about-copy > p { font-size: 14px; }
-  .about-stamp { grid-column: 1; width: 96px; height: 96px; margin-top: 5px; font-size: 13px; }
+  .about-stamp { grid-column: 1; grid-row: auto; width: 96px; height: 96px; margin-top: 5px; font-size: 13px; }
   .site-footer { padding: 65px 0 20px; }
   .footer-inner { grid-template-columns: 1fr; gap: 35px; }
   .site-footer h2 { font-size: 47px; }
